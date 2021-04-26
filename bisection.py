@@ -19,6 +19,12 @@ def bis(a,b,n):
         except:
             print("The values must be in range bla bla")    
             sys.exit(1)
+        if y1 * y2 > 0: #have same sign
+            print(f'Root may be located outside the region [{a}, {b}]')
+            sys.exit(1);
+        if y1 * y2 == 0:
+            print(a if y1 == 0 else b)
+            sys.exit(1)
         if y3 > 0:
             b = c
         else:
