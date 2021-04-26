@@ -28,12 +28,11 @@ def bis(a,b,n):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        a = float(input('put a: '))
-        b = float(input('put b: '))
-        c = int(input('put c: '))
+        a = float(input('Enter a: '))
+        b = float(input('Enter b: '))
+        c = int(input('number of iterations: '))
     else:
         a = float(sys.argv[1])    
         b = float(sys.argv[2])    
         c = int(sys.argv[3])    
-
     bis(a,b,c)    
