@@ -22,7 +22,10 @@ def secant(p_, p, n):
             print(p)
             sys.exit(1)
         t = p
-        p = p - y * (p-p_) / (y-y_)
+        try:
+            p = p - y * (p-p_) / (y-y_)
+        except:
+            print(f'P{_+2} = {p}')
         p_ = t
         print(f'P{_+2} = {p}')   
     print(p)

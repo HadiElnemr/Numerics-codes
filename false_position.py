@@ -22,11 +22,13 @@ def false_position(p_, p, n):
             print(p)
             sys.exit(1)
         t = p 
-        p = p - y * (p-p_) / (y-y_)
+        try:
+            p = p - y * (p-p_) / (y-y_)
+        except:
+            print(f'P{_+2} = ', p)
         if f(t)*f(p_) > 0:    
             p_ = t 
-        #print(f"P{_+2} = ")   
-    print(p)
+        print(f'P{_+2} = ',p)   
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
