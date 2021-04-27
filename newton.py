@@ -20,7 +20,11 @@ def newton(p, n):
         if y == 0:
             print(p)
             sys.exit(1)
-        p=p-y/y_
+        try:
+            p=p-y/y_
+        except:
+            print("Derivative of y became zero at some point during calculations, consider using secant or false position technique") 
+            sys.exit(1)
         print(f'P{_+1} = {p}')   
     print(p)
 
